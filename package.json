@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resources/scss --output src/public/css",
+    "concurrently": "concurrently \"nodemon --inspect src/index.js\" \"node-sass --watch src/resources/scss --output src/public/css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,10 +21,15 @@
   "homepage": "https://github.com/caotoanbkdt/blog#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.0"
+    "express-handlebars": "^5.3.0",
+    "mongoose": "^5.12.3"
   },
   "devDependencies": {
+    "concurrently": "^6.0.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "node-sass": "^5.0.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
   }
 }
